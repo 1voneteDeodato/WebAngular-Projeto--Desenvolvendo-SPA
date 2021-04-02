@@ -1,0 +1,60 @@
+
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Clínica Cicatricure</span>
+    </mat-toolbar-row>
+  
+  </mat-toolbar>
+
+
+   <spa-paciente [ValorInicial]="valor"></spa-paciente>
+
+   <button (click)="mudarValor()"> Mudar Valor</button>
+   <button (click)="reiniciarValor()"> Reiniciar Valor</button>
+   <button (click)="exibeTabela()"> Exibe Tabela</button>
+   
+
+  <table *ngif= 'exibeTabela'>
+    
+    <tr>
+
+      <th> paciente </th>
+      <th> Endereço </th>
+      <th> email </th>
+     
+    </tr>
+
+
+    <tr *ngfor="let paciente of listaPacientes">
+
+      <td> paciente.paciente </td>
+      <td> paciente.Endereço </td>
+      <td> paciente.email </td>
+     
+    </tr>
+
+  </table>
+
+ 
+
+   
+
+
+    
+    
+
+    
+
+    
+
+
+
+
+ 
+
+
+ 
+
+  
+  
